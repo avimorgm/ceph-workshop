@@ -1,6 +1,6 @@
-# Lab 4: RADOS Gateway
+# Lab 5: RADOS Gateway
 
-## 4.1 s3cmd
+## 5.1 s3cmd
 
 1. Install `s3cmd` on the machine you are working on (and not on the Ceph Nano container).
 
@@ -197,7 +197,7 @@
     
     Please note that now our OMAP has been cut into two pieces.
     
-## 4.2 awscli
+## 5.2 awscli
 
 1. Download the `awscli` tool into your machine (and not on the Ceph Nano Container):
 
