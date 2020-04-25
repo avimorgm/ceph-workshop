@@ -1,6 +1,6 @@
-# Lab 3: Modifying the Configuration File and Cluster Map Dumps
+# Lab 4: Modifying the Configuration File and Cluster Map Dumps
 
-## 3.1 Deleteing a pool
+## 4.1 Deleteing a pool
 
 1. Login to the cluster:
 
@@ -65,7 +65,7 @@
     ```
     Please remember that this value is non-persistent with `injectargs` command.
     
-## 3.2 Debug level change
+## 4.2 Debug level change
 
 1. Change the debug of osd daemon. You can do it with the `injectargs`/`config set` commands or with edit the configuration file. Please note, if you make it with changing the Ceph configuration file, please change/add the lines under the global section.
 
@@ -89,7 +89,7 @@
     ...
     ```
     
-## 3.3 Cluster Maps
+## 4.3 Cluster Maps
 
 1. Dump cluster maps with:
 
