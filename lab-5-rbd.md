@@ -76,7 +76,8 @@
 
     ```
     $ vi rbd.fio
-
+    ```
+    ```
     [global]
     ioengine=rbd
     clientname=admin
