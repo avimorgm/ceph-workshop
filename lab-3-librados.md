@@ -34,7 +34,8 @@
 
     ```
     $ vi librados_test.py
-
+    ```
+    ```
     import rados, sys
 
     cluster = rados.Rados(conffile='ceph.conf')
