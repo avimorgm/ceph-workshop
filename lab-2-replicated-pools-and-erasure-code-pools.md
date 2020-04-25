@@ -131,6 +131,8 @@
 
     ```
     ceph osd getcrushmap -o crush_compiled.bin
+    ```
+    ```
     crushtool -d crush_compiled.bin -o deco_crush
     ```
     
@@ -138,7 +140,8 @@
 
     ```
     $ vi deco_crush
-
+    ```
+    ```
     rule replicated_rule {
       id 0
       type replicated
@@ -168,7 +171,8 @@
 
     ```
     df -h | grep ceph
-        
+    ```
+    ``` 
     tmpfs    496M   24K  496M   1% /var/lib/ceph/osd/ceph-2
     tmpfs    496M   24K  496M   1% /var/lib/ceph/osd/ceph-4
     ```
@@ -195,7 +199,8 @@
  
     ```
     ceph-objectstore-tool --data-path /var/lib/ceph/osd/ceph-4 --op list | grep hosts
-
+    ```
+    ```
     ["10.e",{"oid":"hosts","key":"","snapid":-2,"hash":3927648654,"max":0,"pool":10,"namespace":"","max":0}]
     ```
     
@@ -211,7 +216,8 @@
 
     ```
     ceph osd erasure-code-profile get default
-    
+    ```
+    ```
     k=2
     m=1
     plugin=jerasure
@@ -246,7 +252,8 @@
 
     ```
     ceph osd map myec_pool hosts
-    
+    ```
+    ```
     osdmap e38 pool 'myec_pool' (10) object 'hosts' -> pg 10.ea1b298e (10.e) -> up ([0,NONE,NONE,NONE,NONE,NONE], p0) acting ([0,NONE,NONE,NONE,NONE,NONE], p0)
     ```
     
@@ -256,6 +263,8 @@
  
     ```
     ceph osd getcrushmap -o crush_compiled.bin
+    ```
+    ```
     crushtool -d crush_compiled.bin -o deco_crush
     ```
     
@@ -263,7 +272,8 @@
  
     ```
     vi deco_crush
-    
+    ```
+    ```
     rule myec_pool {
       id 1
       type erasure
@@ -333,7 +343,8 @@
 
     ```
     ceph-objectstore-tool --data-path /var/lib/ceph/osd/ceph-2 --op list-pgs | grep 11.e
-    
+    ```
+    ```
     11.es2
     ```
     
@@ -343,7 +354,8 @@
 
     ```
     ceph-objectstore-tool --data-path /var/lib/ceph/osd/ceph-2 --op list | grep hosts
-    
+    ```
+    ```
     ["11.es2",{"oid":"hosts","key":"","snapid":-2,"hash":3927648654,"max":0,"pool":11,"namespace":"","shard_id":2,"max":0}]
     ```
     
