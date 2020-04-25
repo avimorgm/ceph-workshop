@@ -12,7 +12,8 @@
 
     ```
     ./cn cluster status master
-
+    ```
+    ```
     Endpoint: <rgw-endpoint>
     Dashboard: <dashboard-endpoint>
     Access key: <access-key>
@@ -24,7 +25,8 @@
 
     ```
     s3cmd --configure
-
+    ```
+    ```
     Enter new values or accept defaults in brackets with Enter.
     Refer to user manual for detailed description of all options.
 
@@ -76,6 +78,8 @@
 
     ```
     host_base = <rgw-endpoint-without-http://>
+    ```
+    ```
     host_bucket = <rgw-endpoint-without-http://>
     ```
     
@@ -113,6 +117,8 @@
     
     ```
     ./cn clutser enter master
+    ```
+    ```
     rados lspools
     ```
     
@@ -122,7 +128,8 @@
 
     ```
     rados ls -p default.rgw.buckets.data
-    
+    ```
+    ```
     e1a6d73b-8958-494e-94a7-0583318de7b0.24102.1_file
     ```
     
@@ -152,6 +159,8 @@
 
     ```
     ./cn cluster enter master
+    ```
+    ```
     rados lspools
     ```
     
@@ -161,7 +170,8 @@
 
     ```
     rados ls -p default.rgw.buckets.index
-    
+    ```
+    ```
     .dir.e1a6d73b-8958-494e-94a7-0583318de7b0.24102.1
     ```
     
@@ -193,6 +203,8 @@
 
     ```
     yum install -y python3-pip
+    ```
+    ```
     pip3 install awscli
     ```
     
@@ -200,7 +212,8 @@
 
     ```
     ./cn cluster status master
-
+    ```
+    ```
     Endpoint: <rgw-endpoint>
     Dashboard: <dashboard-endpoint>
     Access key: <access-key>
@@ -212,7 +225,8 @@
 
     ```
     aws configure
-
+    ```
+    ```
     AWS Access Key ID [None]: <access-key>
     AWS Secret Access Key [None]: <secret-key>
     Default region name [None]: <Enter>
@@ -246,5 +260,5 @@
 8. How to get part of the object:
 
     ```
-    aws s3api get-object --bucket your_bucket --key your_file --range bytes=0-2  --endpoint-url <rgw-endpoint>  /tmp/your_new_file
+    aws s3api get-object --bucket your_bucket --key your_file --range bytes=0-2  --endpoint-url <rgw-endpoint> /tmp/your_new_file
     ```
