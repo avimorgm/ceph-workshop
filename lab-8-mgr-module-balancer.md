@@ -1,4 +1,4 @@
-# Lab 7: MGR Module - Balancer
+# Lab 8: MGR Module - Balancer
 
 1. Login to the cluster:
 
