@@ -30,7 +30,8 @@
     
     ```
     cat /root/asecret
-    
+    ```
+    ```
     AQDFpIle55cBABAAemiFLZKWYfBqu0YRV5kY+Q==
     ```
 
@@ -49,7 +50,9 @@
 8. Create 2 directories in the mount point, type the commands:
 
     ```
-    mkdir -p /mnt/cephfs/dir1      
+    mkdir -p /mnt/cephfs/dir1
+    ```
+    ```
     mkdir -p /mnt/cephfs/dir2 
     ```
 
@@ -89,6 +92,8 @@
 
     ```
     cd  /mnt/cephfs/dir1/
+    ```
+    ```
     rm -rf ddtest
     ```
 
