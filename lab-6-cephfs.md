@@ -88,7 +88,7 @@
     ls /mnt/cephfs/dir1/.snap/mysnap
     ```
 
-15. Try to remove a file, from dir1 directory:
+15. Try to remove a file, from `dir1` directory:
 
     ```
     cd  /mnt/cephfs/dir1/
