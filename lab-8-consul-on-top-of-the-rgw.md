@@ -34,8 +34,14 @@
 
     ```
     mkdir /etc/consul.d
+    ```
+    ```
     mkdir /etc/consul
+    ```
+    ```
     mkdir /tmp/consul
+    ```
+    ```
     mkdir /root/consul
     ```
     
@@ -43,8 +49,11 @@
 
     ```
     cd /root/consul/consul-demo-master
+    ```
+    ```
     vi rgw1.json
-
+    ```
+    ```
     { 
       "service": 
       { 
@@ -64,6 +73,8 @@
     
     ```
     cp rgw1.json default.json /etc/consul.d
+    ```
+    ```
     cp docker-compose.yml /root/consul
     ```
     
@@ -71,6 +82,8 @@
 
     ```
     cd /root/consul
+    ```
+    ```
     docker-compose up -d
     ```
     
@@ -78,7 +91,8 @@
 
     ```
     vi /etc/resolv.conf
-
+    ```
+    ```
     nameserver 127.0.0.1
     ```
     
