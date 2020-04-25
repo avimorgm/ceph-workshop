@@ -1,4 +1,4 @@
-# Lab 8: Consul on top of the RGW
+# Lab 10: Consul on top of the RGW
 
 1. Install git on your machine (not on the Ceph container), using:
 
