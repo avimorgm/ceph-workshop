@@ -10,23 +10,23 @@
 2. Create a new pool:
 
     ```
-    ceph osd pool create replication 32 32 
+    ceph osd pool create repl_pool 32 32 
     ```
     
 3. rados put -p replication hosts /etc/hosts
   
      ```
-    ceph osd pool create replication 32 32 
+    ceph osd pool create repl_pool 32 32 
     ```
 4. List the pool to see the object was successfully created
 
      ```
-    rados ls -p replication
+    rados ls -p repl_pool
     ```
 5. Collect the OSDs lvm paths for this specific host
 
     ```
-    rados ls -pHOST_LV_PATHS=$(for OSD_INFO in $(ceph-volume lvm list --format json | jq -c '.[]');do echo ${OSD_INFO} | jq -r      '.[].lv_path' ;done) replication
+    rados ls -pHOST_LV_PATHS=$(for OSD_INFO in $(ceph-volume lvm list --format json | jq -c '.[]');do echo ${OSD_INFO} | jq -r      '.[].lv_path' ;done) repl_pool
     ```
 6. Stop the OSDs and mark them out
 
@@ -36,7 +36,7 @@
 7. Try downloading the object once again to verify that although ⅓ of the data is unavailable, you can still access it.
 
      ```
-    rados get -p replication hosts hosts_file   
+    rados get -p repl_pool hosts hosts_file   
     ```
     
 8. Purge osds from the clusters, you should 4 OSDs now
@@ -52,7 +52,7 @@
 10. Verify you can still read the object the you have uploaded
 
     ```
-    rados get -p replication hosts hosts_file  
+    rados get -p repl_pool hosts hosts_file  
     ```
 
     
