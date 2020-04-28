@@ -26,7 +26,7 @@
 5. Collect the OSDs lvm paths for this specific host
 
     ```
-    HOST_LV_PATHS=$(for OSD_INFO in $(ceph-volume lvm list --format json | jq -c '.[]');do echo ${OSD_INFO} | jq -r      '.[].lv_path' ;done) repl_pool
+    HOST_LV_PATHS=$(for OSD_INFO in $(ceph-volume lvm list --format json | jq -c '.[]');do echo ${OSD_INFO} | jq -r '.[].lv_path' ;done)
     ```
 6. Stop the OSDs and mark them out
 
