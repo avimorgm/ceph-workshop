@@ -1,6 +1,6 @@
-# Lab 7: RADOS Gateway
+# Lab 6: RADOS Gateway
 
-## 7.1 s3cmd
+## 6.1 s3cmd
 
 1. Install `s3cmd` on the machine you are working on (and not on the Ceph Nano container).
 
