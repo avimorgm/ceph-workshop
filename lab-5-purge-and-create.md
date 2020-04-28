@@ -33,13 +33,13 @@
      ```
     for OSD_ID in `ceph osd ls-tree $HOSTNAME`;do systemctl stop ceph-osd@${OSD_ID}; ceph osd out ${OSD_ID};done
     ```
-7. Try downloading the object once again to verify that although ⅓ of the data is unavailable, you can still access it.
+7. Please note, we have now 2 copy of the data from 3. and the data is still availbale.
 
      ```
     rados get -p repl_pool hosts hosts_file   
     ```
     
-8. Purge osds from the clusters, you should 4 OSDs now
+8. Purge osds from the clusters, you should have 4 OSDs now
 
     ```
     for OSD_ID in `ceph osd ls-tree $HOSTNAME`;do ceph osd purge ${OSD_ID} --yes-i-really-mean-it;done   
