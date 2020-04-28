@@ -1,6 +1,6 @@
-# Lab 7: RBD
+# Lab 8: RBD
 
-## 7.1 RBD in Ceph
+## 8.1 RBD in Ceph
 
 1. Create an RBD pool, type the command:
 
@@ -70,7 +70,7 @@
     df -h | grep /mnt/mountrbd
     ```
     
-## 7.2 Workload test using FIO
+## 8.2 Workload test using FIO
 
 1. Let’s create a FIO file for workload testing. Here is the configuration file for FIO:
 
