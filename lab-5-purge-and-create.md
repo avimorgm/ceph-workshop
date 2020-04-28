@@ -5,7 +5,7 @@
 1. Instsall JQ on the machine:
 
     ```
-    ceph osd pool create rbd 32 32
+    yum install -y jq   
     ```
 2. Create a new pool:
 
@@ -16,7 +16,7 @@
 3. rados put -p replication hosts /etc/hosts
   
      ```
-    ceph osd pool create repl_pool 32 32 
+   rados put -p repl_pool hosts /etc/hosts
     ```
 4. List the pool to see the object was successfully created
 
@@ -42,14 +42,22 @@
 8. Purge osds from the clusters, you should 4 OSDs now
 
     ```
+    for OSD_ID in `ceph osd ls-tree $HOSTNAME`;do ceph osd purge ${OSD_ID} --yes-i-really-mean-it;done   
+    ```
+    
+9. Zap the OSDs lvms, this task unmounts the OSD dir and deletes all data from the block device
+    
+      ```
     for OSD_ID in $HOST_LV_PATHS;do ceph-volume lvm zap ${OSD_ID};done  
     ```
-9. Create the OSDs once again given the previously collected lvm paths
+    
+10. Create the OSDs once again given the previously collected lvm path
 
     ```
-     for OSD_ID in $HOST_LV_PATHS;do ceph-volume lvm create --bluestore --data ${OSD_ID};done
+    for OSD_ID in $HOST_LV_PATHS;do ceph-volume lvm create --bluestore --data ${OSD_ID};done  
     ```
-10. Verify you can still read the object the you have uploaded
+
+11. Verify you can still read the object the you have uploaded
 
     ```
     rados get -p repl_pool hosts hosts_file  
