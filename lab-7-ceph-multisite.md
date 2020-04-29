@@ -1,4 +1,4 @@
-# Lab 7: Ceph Multisite
+# Lab #7: Ceph Multisite
 
 1. For the multi site configuration, we will use the internal IP address of the container. Login to each of the containers and find the required IP address with:
 
