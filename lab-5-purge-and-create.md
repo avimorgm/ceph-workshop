@@ -36,7 +36,9 @@
     for OSD_ID in `ceph osd ls-tree $HOSTNAME`; do systemctl stop ceph-osd@${OSD_ID}; ceph osd out ${OSD_ID}; done
     ```
     
-7. We have now 2 avilable copies of the data from 3, but the data is still availbale. Get the object:
+7. We have now 2 avilable copies of the data from 3, but the data is still availbale. Get the object.
+   In case we have more than 3 hosts, this spesific replica will create on another host and the "Backfill" proccess will
+   start.
 
     ```
     rados get -p repl_pool hosts hosts_file   
