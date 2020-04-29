@@ -1,4 +1,4 @@
-# Lab 2: Replicated Pools and Erasure Code Pools
+# Lab #2: Replicated Pools and Erasure Code Pools
 
 ## 2.1 Replicated Pools
 
