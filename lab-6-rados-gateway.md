@@ -1,4 +1,4 @@
-# Lab 6: RADOS Gateway
+# Lab #6: RADOS Gateway
 
 ## 6.1 s3cmd
 
@@ -197,7 +197,7 @@
     
     Please note that now our OMAP has been cut into two pieces.
     
-## 7.2 awscli
+## 6.2 awscli
 
 1. Download the `awscli` tool into your machine (and not on the Ceph Nano Container):
 
