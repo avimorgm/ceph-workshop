@@ -1,4 +1,4 @@
-# Lab 8: RBD
+# Lab #8: RBD
 
 ## 8.1 RBD in Ceph
 
