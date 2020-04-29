@@ -1,4 +1,4 @@
-# Lab 9: CephFS
+# Lab #9: CephFS
 
 1. Confirm that the MDS role is enabled on your cluster:
     
