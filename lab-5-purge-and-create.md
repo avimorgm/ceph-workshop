@@ -1,4 +1,4 @@
-# Lab 5: Purge and Create OSD
+# Lab #5: Purge and Create OSD
 
 1. Instsall `jq` on your machine:
 
