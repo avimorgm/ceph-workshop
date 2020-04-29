@@ -1,4 +1,4 @@
-# Lab 4: Modifying the Configuration File and Cluster Map Dumps
+# Lab #4: Modifying the Configuration File and Cluster Map Dumps
 
 ## 4.1 Deleteing a pool
 
