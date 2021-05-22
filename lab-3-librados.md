@@ -37,7 +37,7 @@
     ```
 
 ```
- import rados, sys
+import rados, sys
 
 cluster = rados.Rados(conffile='ceph.conf')
 print (cluster.version())
@@ -69,10 +69,9 @@ pools = cluster.list_pools()
 
 for pool in pools:
         print (pool)
-    ```
+```
     
 8. To run the script:
 
-    ```
-    python librados_test.py
-    ```
+python librados_test.py
+    
