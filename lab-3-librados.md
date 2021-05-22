@@ -73,5 +73,5 @@ for pool in pools:
     
 8. To run the script:
 
-python librados_test.py
+python3 librados_test.py
     
