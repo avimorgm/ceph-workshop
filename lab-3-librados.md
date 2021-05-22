@@ -36,48 +36,38 @@
     $ vi librados_test.py
     ```
     ```
-    import rados, sys
+ import rados, sys
 
-    cluster = rados.Rados(conffile='ceph.conf')
-    print "\nlibrados version: " + str(cluster.version())
-    print "Will attempt to connect to: " + str(cluster.conf_get
-    ('mon initial members'))
+cluster = rados.Rados(conffile='ceph.conf')
+print (cluster.version())
+print (cluster.conf_get('mon initial members'))
 
-    cluster.connect()
-    print "\nCluster ID: " + cluster.get_fsid()
+cluster.connect()
+print (cluster.get_fsid())
 
-    print "\n\nCluster Statistics"
-    print "=================="
-    cluster_stats = cluster.get_cluster_stats()
+print ("\n\nPool Operations")
+print ("===============")
 
-    for key, value in cluster_stats.iteritems():
-            print key, value
+print ("\nAvailable Pools")
+print ("----------------")
+pools = cluster.list_pools()
 
-    print "\n\nPool Operations"
-    print "==============="
+for pool in pools:
+        print (pool)
 
-    print "\nAvailable Pools"
-    print "----------------"
-    pools = cluster.list_pools()
+print ("\nCreate 'oren' Pool")
+print ("------------------")
+try:
+  cluster.create_pool('oren')
+except:
+  print("Pool already exists!")
 
-    for pool in pools:
-            print pool
+print ("\nVerify 'oren' Pool Exists")
+print ("-------------------------")
+pools = cluster.list_pools()
 
-    print "\nCreate 'test_librados' Pool"
-    print "------------------"
-    try:
-      cluster.create_pool('test_librados')
-    except:
-      print("Pool already exists!")
-
-    print "\nPool named 'test_librados' exists: " + str(cluster.pool_exists
-    ('test_librados'))
-    print "\nVerify 'test' Pool Exists"
-    print "-------------------------"
-    pools = cluster.list_pools()
-
-    for pool in pools:
-            print pool
+for pool in pools:
+        print (pool)
     ```
     
 8. To run the script:
